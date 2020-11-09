@@ -4,7 +4,7 @@ import '../component/calendar/Calendar.less'
 
 // import Calendar from 'ydl-calendar';
 // import 'ydl-calendar/dist/Calendar.css'
-// import './index.css'
+import './index.css'
 
 const timesData=[ { date:'2020/10/25', type:'1' }, { date:'2020/10/26', type:'1' }]
 
