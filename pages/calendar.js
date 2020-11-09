@@ -1,12 +1,13 @@
 import React from 'react';
-import Calendar from '../component/calendar'
-import '../component/calendar/Calendar.less'
+// import Calendar from '../component/calendar'
+// import '../component/calendar/Calendar.less'
 
-// import Calendar from 'ydl-calendar';
-// import 'ydl-calendar/dist/Calendar.css'
+import Calendar from 'ydl-calendar';
+import 'ydl-calendar/dist/Calendar.css';
+
 import './index.css'
 
-const timesData=[ { date:'2020/10/25', type:'1' }, { date:'2020/10/26', type:'1' }]
+const timesData=[ { date:'2020/10/25', type:'1' }, { date:'2020/10/26', type:'2' },{ date:'2020/10/27', type:'3' }]
 
 
 export default class App extends React.Component{
@@ -34,7 +35,7 @@ export default class App extends React.Component{
         return <div className={'page-calendar'}>
             <div className={'head'}>头部</div>
             <div className={'content'}>
-                <Calendar times={this.state.times} onChange={(selectTime)=>this.onChange(selectTime)}/>
+                <Calendar times={this.state.times} onChange={(selectTime)=>this.onChange(selectTime)} isFixed={false}/>
             </div>
         </div>
 

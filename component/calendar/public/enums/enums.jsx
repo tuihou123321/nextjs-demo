@@ -7,6 +7,6 @@ export const types=[
         value:'约满'
     },{
         type:'3',
-        value:'未开放'
+        value:'-'
     },
 ]

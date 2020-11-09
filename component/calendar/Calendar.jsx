@@ -1,10 +1,17 @@
 import React from 'react';
 import CalendarMonth from "./component/CalendarMonth";
 import {format} from "./public/js/public";
+import classNames from 'classnames'
+
 import PropTypes from 'prop-types';
 
 
 export default class Calendar extends React.Component {
+    static propTypes={
+        times:PropTypes.array,
+        onChange:PropTypes.func,
+        isFixed:PropTypes.boolean
+    }
 
     constructor(props) {
         super(props);
@@ -41,8 +48,10 @@ export default class Calendar extends React.Component {
 
     render(){
         return (
-            <div className="container">
-                <div className="titleBox">
+            <div className="ydl-calendar-container">
+                <div className={classNames('titleBox',{
+                    'fix':this.props.isFixed
+                })}>
                     <div className="title">
                         {
                             this.state.weekday.map((item,index)=>{
@@ -51,13 +60,12 @@ export default class Calendar extends React.Component {
                         }
                     </div>
                 </div>
-                <div>
-                    {
-                        this.state.timesArr.length>0 &&　this.state.timesArr.map((item,index)=>{
-                            return  <CalendarMonth times={item} selectTime={(item)=>{this.selectTime(item)}} key={index}/>
-                        })
-                    }
-                </div>
+
+                {
+                    this.state.timesArr.length>0 &&　this.state.timesArr.map((item,index)=>{
+                        return  <CalendarMonth times={item} selectTime={(item)=>{this.selectTime(item)}} key={index}/>
+                    })
+                }
             </div>
         )
     }
