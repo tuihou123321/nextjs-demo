@@ -1,6 +1,10 @@
 import React from 'react';
-import Calendar from 'ydl-calendar';
-import 'ydl-calendar/dist/Calendar.css'
+import Calendar from '../component/calendar'
+import '../component/calendar/Calendar.less'
+
+// import Calendar from 'ydl-calendar';
+// import 'ydl-calendar/dist/Calendar.css'
+// import './index.css'
 
 const timesData=[ { date:'2020/10/25', type:'1' }, { date:'2020/10/26', type:'1' }]
 
@@ -27,6 +31,12 @@ export default class App extends React.Component{
     }
 
     render(){
-        return <Calendar times={this.state.times} onChange={(selectTime)=>this.onChange(selectTime)}/>
+        return <div className={'page-calendar'}>
+            <div className={'head'}>头部</div>
+            <div className={'content'}>
+                <Calendar times={this.state.times} onChange={(selectTime)=>this.onChange(selectTime)}/>
+            </div>
+        </div>
+
     }
 }

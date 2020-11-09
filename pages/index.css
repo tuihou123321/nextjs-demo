@@ -1,0 +1,8 @@
+.head{
+    height: 80px;
+    background: red;
+    width: 100%;
+}
+.content{
+  position: relative;
+}
