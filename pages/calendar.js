@@ -1,9 +1,9 @@
 import React from 'react';
-import Calendar from '../component/calendar'
-import '../component/calendar/Calendar.less'
+// import Calendar from '../component/calendar'
+// import '../component/calendar/Calendar.less'
 
-// import Calendar from 'ydl-calendar';
-// import 'ydl-calendar/dist/Calendar.css';
+import Calendar from 'ydl-calendar';
+import 'ydl-calendar/dist/Calendar.css';
 
 import './index.css'
 

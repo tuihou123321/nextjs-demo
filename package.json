@@ -17,7 +17,7 @@
     "react": "16.13.1",
     "react-calendar": "^3.1.0",
     "react-dom": "16.13.1",
-    "ydl-calendar": "^1.0.8"
+    "ydl-calendar": "^1.0.9"
   },
   "devDependencies": {
     "@zeit/next-less": "^1.0.1",
