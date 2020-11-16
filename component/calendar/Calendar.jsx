@@ -47,6 +47,7 @@ export default class Calendar extends React.Component {
     }
 
     render(){
+
         return (
             <div className="ydl-calendar-container">
                 <div className={classNames('titleBox',{
@@ -61,11 +62,17 @@ export default class Calendar extends React.Component {
                     </div>
                 </div>
 
-                {
-                    this.state.timesArr.length>0 &&　this.state.timesArr.map((item,index)=>{
-                        return  <CalendarMonth times={item} selectTime={(item)=>{this.selectTime(item)}} key={index}/>
-                    })
-                }
+                <div className={classNames({
+                    'bodyTop':this.props.isFixed
+                })}>
+                    {
+                        this.state.timesArr.length>0 &&　this.state.timesArr.map((item,index)=>{
+                            return  <CalendarMonth times={item} selectTime={(item)=>{this.selectTime(item)}} key={index}/>
+                        })
+                    }
+                </div>
+
+
             </div>
         )
     }

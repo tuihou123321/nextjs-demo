@@ -11,6 +11,7 @@
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
     "dateformat": "^3.0.3",
+    "debugout.js": "^1.0.0",
     "less": "^3.12.2",
     "next": "9.4.4",
     "react": "16.13.1",
