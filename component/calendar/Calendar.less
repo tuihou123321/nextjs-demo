@@ -23,25 +23,29 @@
   .monthBox {
     clear: both;
     margin-bottom: 30px;
-
-    .monthTitle {
-      padding: 20px 0;
+    .monthTitle{
       text-align: center;
-      align-items: center;
-      width: 150px;
-      margin: auto;
-      span.line {
-        width: 20px;
-        background: #d8d8d8;
+      position: relative;
+      width: 140px;
+      margin: 0 auto;
+      padding: 20px 0;
+      font-size: 13px;
+      &:after,&:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        background: #7a7a7a;
         height: 1px;
-        display: inline-block;
+        width: 15px;
       }
-      .monthTitleContent {
-        padding: 0 10px;
-        font-size: 13px;
-        color: #666666;
+      &:after{
+        left: 0;
+      }
+      &:before{
+        right: 0;
       }
     }
+
     .day {
       width: 100%;
       color: #242424;
